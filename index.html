@@ -1,101 +1,465 @@
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aykas Bhons Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="ABResume.pdf">Resume</a></li>
-            <li><a href="mailto:abhons@uwaterloo.ca">Contact Me</a></li>
-        </ul>
-    </nav>
-    <section id="home">
-        <div class="main">
-            <hi class="headings">AYKAS BHONS</hi>
-            <a href="mailto:abhons@uwaterloo.ca"><button class="btn">Email</button></a>
-        </div>
-    </section>
-    <section id="aboutme">
-        <h1 class="headings">ABOUT ME</h1>
-        <div id="mypic">
-            <img src="pictures/aboutme.JPG" alt="Aykas Bhons on a longboard">
-            <div id="intro">
-                <h2>AYKAS BHONS</h2>
-                <p>I am a 20 year old student currently studying at the <a href="https://uwaterloo.ca/">University of Waterloo</a> in Ontario, Canada. I am enrolled in the GBDA (Global Business and Digital Arts) program. I do a lot of drawing and editing of images in my spare time. I use many Adobe software and also dabble in FL Studio from time to time to create some music. Below are programs that I use to create my work.</p>
-                
-                <!--
-                Code copied from: https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
-                Author: Dom (dcode)
-                Name: Styled Table
-                Description: Displays a styled table
-                Date retrieved: Dec. 6, 2021
-                -->
-                
-                <!-- Code Starts Here -->
-                <table class="movietable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Proficiency /5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Adobe Photoshop</td>
-                            <td>Image Editing</td>
-                            <td>5</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>FL Studio</td>
-                            <td>Music Production</td>
-                            <td>4.5</td>
-                        </tr>
-                        <tr>
-                            <td>Adobe After Effects</td>
-                            <td>Video Editing</td>
-                            <td>4</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>Adobe Premiere Pro</td>
-                            <td>Video Editing</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Adobe Illustrator</td>
-                            <td>Image Editing</td>
-                            <td>4</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- Code Ends Here -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Aykas Bhons | Creative Designer</title>
+  <meta name="description" content="Portfolio of Aykas Bhons, a creative designer working across photography, videography, graphics, marketing, and visual design." />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <a href="#home" class="brand" aria-label="Aykas Bhons home">
+      <span class="brand-mark">
+        <img
+          src="assets/images/AA-logo-white.png"
+          alt="Aykas Bhons logo"
+          class="brand-logo"
+        >
+      </span>
+      <span>Aykas Bhons</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </nav>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy-wrap reveal">
+          <div class="eyebrow">
+            <span></span>
+            Creative designer working across visual media
+          </div>
+
+          <h1>
+            Designing visuals that feel
+            <span class="gradient-text">alive.</span>
+          </h1>
+
+          <p class="hero-copy">
+            I create clean, bold, and memorable work across photography, videography,
+            graphics, marketing, and digital design. This portfolio is a curated space
+            for visuals with personality, polish, and purpose.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">View Featured Work →</a>
+            <a class="btn btn-secondary" href="#contact">Start a Project</a>
+          </div>
+
+          <div class="stats" aria-label="Portfolio highlights">
+            <div class="stat-card">
+              <strong>Photo</strong>
+              <span>Portraits, events, products, storytelling</span>
             </div>
+
+            <div class="stat-card">
+              <strong>Video</strong>
+              <span>Reels, edits, promo content, motion</span>
+            </div>
+
+            <div class="stat-card">
+              <strong>Design</strong>
+              <span>Graphics, branding, campaigns, layouts</span>
+            </div>
+          </div>
         </div>
+
+        <div class="visual-stage reveal" aria-hidden="true">
+          <div class="orb"></div>
+
+          <div class="media-card card-one">
+            <img src="assets/images/newyork.png" alt="Photography preview" class="hero-card-media">
+            <small>Photography</small>
+          </div>
+
+          <div class="media-card card-two">
+            <video 
+                class="hero-card-media"
+                src="assets/videos/sample.mp4"
+                poster="assets/images/video-thumbnail.mp4"
+                muted
+                autoplay
+                loop
+                playsinline
+                preload="metadata">
+            </video>
+            <small>Videography</small>
+          </div>
+
+          <div class="media-card card-three">
+            <img src="assets/images/logowork.png" alt="Graphic design preview" class="hero-card-media">
+            <small>Visual Identity</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true"></div>
     </section>
-    <section id="portfolio">
-        <h1 class="headings">PORTFOLIO</h1>
-        <div class="gallery">
-            <a href="art1.html"><img src="pictures/art1.jpg" alt="Your Name inspired drawing"></a>
-            <a href="art2.html"><img src="pictures/art2.png" alt="To The Moon inspired drawing"></a>
-            <a href="art3.html"><img src="pictures/art3.jpg" alt="The Shape of Voice inspired drawing"></a>
-            <a href="pic1.html"><img src="pictures/pic1.jpg" alt="Picture of Niagra Falls"></a>
-            <a href="pic2.html"><img src="pictures/pic2.jpg" alt="Picture of Sunset Point Beach"></a>
-            <a href="pic3.html"><img src="pictures/pic3.jpg" alt="Pictre of Island Lake Conservation Area"></a>
-            <a href="stmm.html"><img src="pictures/stmm.png" alt="A podcast logo"></a>
-            <a href="plume.html"><img src="pictures/plume1.png" alt="La Plume magazine cover"></a>
-            <a href="magazine.html"><img src="pictures/magazine.png" alt="Aykas Bhons magazine cover"></a>
+
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>Photography</span><b>✦</b>
+            <span>Videography</span><b>✦</b>
+            <span>Graphic Design</span><b>✦</b>
+            <span>Marketing</span><b>✦</b>
+            <span>Branding</span><b>✦</b>
+            <span>Photography</span><b>✦</b>
+            <span>Videography</span><b>✦</b>
+            <span>Graphic Design</span><b>✦</b>
+            <span>Marketing</span><b>✦</b>
+            <span>Branding</span><b>✦</b>
+          </div>
+      
+          <div class="marquee-group">
+            <span>Photography</span><b>✦</b>
+            <span>Videography</span><b>✦</b>
+            <span>Graphic Design</span><b>✦</b>
+            <span>Marketing</span><b>✦</b>
+            <span>Branding</span><b>✦</b>
+            <span>Photography</span><b>✦</b>
+            <span>Videography</span><b>✦</b>
+            <span>Graphic Design</span><b>✦</b>
+            <span>Marketing</span><b>✦</b>
+            <span>Branding</span><b>✦</b>
+          </div>
         </div>
-        <div class="credit">
-            <p>Credits To Aykas Bhons</p>
+    </div>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Selected work</div>
+            <h2>Projects with range.</h2>
+          </div>
+
+          <p class="section-text">
+            A curated collection of photography, videography, campaign design, branding, and
+            creative projects. Explore selected work that highlights my visual style, process, and approach to storytelling.
+
+          </p>
         </div>
+
+        <div class="work-controls reveal" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="photo">Photography</button>
+          <button class="filter-btn" data-filter="video">Videography</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="marketing">Marketing</button>
+        </div>
+
+        <div class="work-grid">
+          <article class="project-card reveal" data-category="photo">
+            <img
+              class="project-media-img"
+              src="assets/images/portraitcolection.png"
+              alt="Portrait photography collection"
+              loading="lazy"
+            >
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Photography</span>
+                <span class="tag">Portrait</span>
+              </div>
+
+              <h3>Photo Collection</h3>
+
+              <p>
+                A curated image series focused on lighting, personality, tone,
+                and clean visual storytelling.
+              </p>
+
+              <a href="#" class="project-link">Open case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="video">
+            <video
+              class="project-media-img project-video"
+              src="assets/videos/promo-reel.mp4"
+              poster="assets/images/promo-reel-img.png"
+              muted
+              loop
+              playsinline
+              preload="metadata">
+            </video>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Video</span>
+                <span class="tag">Motion</span>
+              </div>
+
+              <h3>Promo Reel</h3>
+
+              <p>
+                A short-form video project built for social media, pacing,
+                emotion, and clear brand energy.
+              </p>
+
+              <a href="#" class="project-link">Watch preview →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="design">
+            <img
+              class="project-media-img"
+              src="assets/images/brand-campaign.png"
+              alt="Portrait photography collection"
+              loading="lazy"
+            >
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Graphics</span>
+                <span class="tag">Layout</span>
+              </div>
+
+              <h3>Social Campaign Kit</h3>
+
+              <p>
+                Graphic templates and creative assets designed for consistency
+                across posts, banners, and announcements.
+              </p>
+
+              <a href="#" class="project-link">View assets →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="marketing">
+            <img
+              class="project-media-img"
+              src="assets/images/logowork.png"
+              alt="Portrait photography collection"
+              loading="lazy"
+            >
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Marketing</span>
+                <span class="tag">Strategy</span>
+              </div>
+
+              <h3>Brand Launch Concepts</h3>
+
+              <p>
+                Visual direction, campaign thinking, and copy-driven creative
+                for launching a memorable identity.
+              </p>
+
+              <a href="#" class="project-link">Read breakdown →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="design">
+            <img
+              class="project-media-img"
+              src="assets/images/logo-identity.png"
+              alt="Portrait photography collection"
+              loading="lazy"
+            >
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Branding</span>
+                <span class="tag">Identity</span>
+              </div>
+
+              <h3>Logo & Identity Work</h3>
+
+              <p>
+                Personal and client-facing visual systems with flexible marks,
+                colours, type, and presentation mockups.
+              </p>
+
+              <a href="#" class="project-link">Explore identity →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="photo video">
+            <video
+              class="project-media-img project-video"
+              src="assets/videos/event-coverage.mp4"
+              poster="assets/images/event-coverage.png"
+              muted
+              loop
+              playsinline
+              preload="metadata">
+            </video>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Photo</span>
+                <span class="tag">Video</span>
+              </div>
+
+              <h3>Event Coverage</h3>
+
+              <p>
+                Photo and video coverage built around atmosphere, candid moments,
+                detail shots, and shareable highlights.
+              </p>
+
+              <a href="#" class="project-link">See coverage →</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">What I do</div>
+            <h2>Creative direction with hands-on execution.</h2>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">◐</div>
+            <h3>Photography</h3>
+            <p>
+              Portraits, product shots, event coverage, edited image sets,
+              and visual storytelling for brands or personal projects.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">▶</div>
+            <h3>Videography</h3>
+            <p>
+              Short-form edits, promo reels, social clips, event recaps,
+              and visual content built for attention and pacing.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">✦</div>
+            <h3>Graphic Design</h3>
+            <p>
+              Posters, social graphics, brand assets, layouts, templates,
+              digital banners, and polished visual systems.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">↗</div>
+            <h3>Marketing</h3>
+            <p>
+              Campaign concepts, content planning, messaging, creative strategy,
+              and assets that support a clear goal.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-panel">
+        <div class="portrait-box reveal">
+          <img
+            src="assets/images/personal-img.png"
+            alt="Portrait of Aykas Bhons"
+            class="about-image"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-copy reveal">
+          <div class="section-kicker">About me</div>
+
+          <h2>Visuals, stories, and thoughtful details.</h2>
+
+          <p>
+            I brand myself as a creative designer because my work lives between many lanes:
+            photo, video, graphics, marketing, and digital design. I enjoy building visuals
+            that feel intentional, clean, expressive, and easy to connect with.
+          </p>
+
+          <p>
+            This website is designed to feel like a living portfolio: bold enough to grab
+            attention, simple enough to browse, and flexible enough to grow as new work gets added.
+          </p>
+
+          <div class="skill-cloud">
+            <span>Adobe Creative Suite</span>
+            <span>Figma</span>
+            <span>Photography</span>
+            <span>Video Editing</span>
+            <span>Branding</span>
+            <span>Social Content</span>
+            <span>Campaign Design</span>
+            <span>Web Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-content">
+            <div>
+              <div class="section-kicker">Contact</div>
+
+              <h2>Have a project, role, or idea?</h2>
+
+              <p>
+                Reach out for creative work, collaborations, freelance projects,
+                or opportunities involving design, photography, video, and marketing.
+              </p>
+            </div>
+
+            <div class="contact-links">
+              <a href="mailto:abhons@aykasaesthetics.ca">
+                <span>Email</span>
+                <strong>↗</strong>
+              </a>
+
+              <a href="https://www.linkedin.com/in/aykas-bhons-79738326b/" target="_blank" rel="noreferrer">
+                <span>LinkedIn</span>
+                <strong>↗</strong>
+              </a>
+
+              <a href="https://www.instagram.com/aykas._b" target="_blank" rel="noreferrer">
+                <span>Instagram</span>
+                <strong>↗</strong>
+              </a>
+
+              <a href="assets/documents/resume.pdf" target="_blank" rel="noreferrer">
+                <span>View Resume</span>
+                <strong>↗</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Aykas Bhons. All rights reserved.</p>
+      <p>Creative Designer · Photo · Video · Graphics · Marketing</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
